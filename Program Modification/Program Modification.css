@@ -1,0 +1,107 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 3px solid #dadada;
+  text-align: justify;
+  padding: 4px;
+}
+
+th.col1{
+  width: 20%;
+}
+
+th.col2{
+  width: 35%;
+}
+
+th.col3{
+  width: 35%;
+}
+
+th.col4{
+  width: 10%;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: f0f0f0;
+}
+
+input {
+  width: 100%;
+}
+
+.edit-mode input {
+  border: 1px solid #000000;
+}
+
+.newexercise{  
+  outline: none;  
+  background: none;  
+  border: none;  
+  padding: 5px 10px;  
+  cursor: pointer;  
+  background: #2cdd85;  
+  color: #ffffff;  
+  width: 140px;
+  height: 25px;
+  &:hover {  
+      background: darken(#2cdd85, 10%);  
+  }  
+
+}
+
+.edit {  
+  outline: none;  
+  background: none;  
+  border: none;  
+  padding: 5px 10px;  
+  cursor: pointer;  
+  background: #2199e8;  
+  color: #ffffff;  
+  width: 60px;
+  height: 25px;
+  &:hover {  
+      background: darken(#2199e8, 10%);  
+  }  
+}  
+
+.save {  
+  outline: none;  
+  background: none;  
+  border: none;  
+  padding: 5px 10px;  
+  cursor: pointer;  
+  display: none;  
+  background: #32AD60;  
+  color: #ffffff;  
+  width: 60px;
+  height: 25px;
+  &:hover {  
+      background: darken(#32AD60, 10%);  
+  }  
+  
+}  
+
+.delete {  
+  outline: none;  
+  background: none;  
+  border: none;  
+  padding: 5px 10px;  
+  cursor: pointer;  
+  display: none;  
+  background: #EC5840;
+  width: 60px;
+  height: 25px;  
+  color: #ffffff;  
+      &:hover {  
+      background: darken(#EC5840, 10%);  
+  }  
+}  

@@ -1,7 +1,7 @@
 <?php
 
 // Set session lifetime
-ini_set('session.gc_maxlifetime', 7200);
+ini_set('session.gc_maxlifetime', 720);
 
 // Start session
 session_start();
@@ -91,6 +91,7 @@ if ($success) {
     $studentJSON = json_encode($studentData);
 
     echo '<script>';
+    echo 'localStorage.setItem("accessLevel", "0");';
     echo 'localStorage.setItem("studentData", \'' . addslashes($studentJSON) . '\');';
     echo 'window.location.href = "Profile/Profile.html";';
     echo '</script>';

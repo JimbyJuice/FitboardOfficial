@@ -33,8 +33,8 @@
         <div class="user">
             <img src="../Images/User_Image.jpg" alt="profile picture" class="User_Image" id="userImage">
             <div>
-                <p class="bold">Default&#160User</p>
-                <p>Admin</p>
+                <p class="bold" id="userName">Default&#160User</p>
+                <p id="userRole">Admin</p>
             </div>
         </div>
 
@@ -110,9 +110,28 @@
 
     <!-- External JavaScript -->
     <script src="../Settings/darklight_mode.js"></script>
-    <script src="Activite_Sidebar.js"> </script>
+    <script src="Activite_Sidebar.js"></script>
     <script src="../Profile/Profile_Pic.js"></script>
     <script src="../Profile/Profile_Check.js"></script>
 
+    <script>
+        function onload() {
+          
+            var accessLevel = localStorage.getItem('accessLevel');
+            var userNameElement = document.getElementById('userName');
+            var userRoleElement = document.getElementById('userRole');
+            
+            if (accessLevel === '1') {
+                userNameElement.textContent = 'Rurt Kich';
+                userRoleElement.textContent = 'Admin';
+            } else if (accessLevel === '0') {
+                var studentData = JSON.parse(localStorage.getItem('studentData'));
+                if (studentData && studentData.givenName && studentData.surname) {
+                    userNameElement.textContent = studentData.givenName + ' ' + studentData.surname;
+                    userRoleElement.textContent = 'Student';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
